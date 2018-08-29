@@ -5,6 +5,7 @@ body
     font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
 
+
 a
 {
     text-decoration:none;
@@ -34,12 +35,19 @@ a
 .title
 {
     margin:auto;
-    margin-top:50px;
+    margin-top:100px;
     text-align:center;
     width:400px;
     padding:10px;
     background-color:#fff;
     border-radius:10px;
+}
+
+.barholder
+{
+    margin-top:20px;
+    display:table;
+    border-spacing:20px 0px;
 }
 
 .bar
@@ -48,11 +56,13 @@ a
     margin-top:20px;
     margin-bottom:10px;
     width:400px;
+    display:table-row;
+    table-layout:fixed;
 }
 
 .bar > a
 {
-    display:inline-block;
+    display:table-cell;
     text-align:center;
     border:solid;
     width:50px;
@@ -62,6 +72,29 @@ a
     margin-left:10px;
     margin-right:10px;
     font-size:30pt;
+}
+
+.minimized > .barholder
+{
+    margin:0;
+    margin-left:-10px;
+    border-spacing: 10px 0px;
+}
+
+.minimized > .barholder > .bar
+{
+    margin-left:-1000px;
+}
+
+.minimized
+{
+    width:420px;
+    margin-top:20px
+}
+
+.bar > .back
+{
+    border:solid #fff;
 }
 
 .bar > .ui
@@ -88,6 +121,12 @@ a
     color:#22235a;
 }
 
+.bar > .back:hover
+{
+    border:solid #fff;
+    color:#551A8B;
+}
+
 .bar > .ui:hover
 {
     background-color:#89f;
@@ -106,4 +145,28 @@ a
 .bar > .fp:hover
 {
     background-color:#a7e;
+}
+
+.body
+{
+    background-color: white;
+    margin:auto;
+    margin-top:30px;
+    width:780px;
+    padding:10px 50px;
+    border-radius:10px;
+}
+
+.body > h1, h2, h3
+{
+    margin-left:20px;
+}
+
+.caption
+{
+    text-align:center;
+    margin:auto;
+    font-style:italic;
+    padding:10px;
+    max-width:650px;
 }
