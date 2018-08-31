@@ -162,6 +162,12 @@ a
     margin-left:20px;
 }
 
+h3
+{
+	margin-top:30px;
+	margin-bottom:0px;
+}
+
 .caption
 {
     text-align:center;
@@ -172,7 +178,7 @@ a
 
 .imgwrapper
 {
-	margin-top:20px;
+	margin-top:0px;
 }
 
 img
