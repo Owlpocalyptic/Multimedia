@@ -152,12 +152,13 @@ a
     background-color: white;
     margin:auto;
     margin-top:30px;
+	margin-bottom: 80px;
     width:780px;
     padding:10px 50px;
     border-radius:10px;
 }
 
-.body > h1, h2, h3, p
+.body > h1, h2, h3, h4, p
 {
     margin-left:20px;
 }
@@ -166,6 +167,29 @@ h3
 {
 	margin-top:30px;
 	margin-bottom:0px;
+}
+
+table
+{
+	margin-top:20px;
+	margin-bottom:30px;
+	border-spacing:10px 20px;
+}
+
+th
+{
+	width:180px;
+}
+
+td
+{
+	font-style:italic;
+}
+
+.subtitle
+{
+	margin-top:-15px;
+	color:#777;
 }
 
 .caption
@@ -188,6 +212,13 @@ img
 	margin:auto;
 	display:block;
 	border:solid black;
+}
+
+iframe
+{
+	max-width:700px;
+	margin:auto;
+	display:block;
 }
 
 .section
@@ -229,4 +260,10 @@ img
 {
 	max-width:100%;
 	max-height:200px;
+}
+
+.script > h2
+{
+	background-color:#ccc;
+	padding-left:3px;
 }
