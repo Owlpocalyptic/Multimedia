@@ -33,11 +33,11 @@
         <div class="section">
             <h2>Development</h2>
             <div class="imgrowwrapper">
-                    <div class="imgrow two">
-                        <a href="img/bouncy-owl.gif"><img src="img/bouncy-owl.gif"></img></a>
-                        <a href="img/desert-man.gif"><img src="img/desert-man.gif"></img></a>
-                    </div>
+                <div class="imgrow two">
+                    <a href="img/bouncy-owl.gif"><img src="img/bouncy-owl.gif"></img></a>
+                    <a href="img/desert-man.gif"><img src="img/desert-man.gif"></img></a>
                 </div>
+            </div>
             <h3>Getting Comfortable</h3>
             <p>Unlike the other Adobe products that come packaged with drawing tools, Adobe Animate
                adds the dimension of time to the standard X and Y axes of two-dimensional art. This
@@ -74,7 +74,7 @@
             <div class="imgrowwrapper">
                 <img src="img/struggles 19.png"></img>
             </div>
-            <p>For example, this still shot from my final project is, at most, a hasty rendition
+            <p>For example, this shot from my final project is, in still form, just a hasty rendition
                of an unfortunate crash landing. But in the animation above, a simple motion tween is enough
                to breathe life and dynamism into this exact image. Both the physical motion and momentum,
                as well as the emotional component of the owl's dismal failure, are encoded in the shot's
@@ -94,7 +94,101 @@
                at least thumbnailed the idea before leaping straight into it. That said, I was working with limited
                resources in basically every single respect I can think of. I took what I could get.
             </p>
-            
+        </div>
+        <div class="section">
+            <h2>Production</h2>
+            <h3>Tools Of The Trade</h3>
+            <p>I used Adobe Animate to create my animation. It's available on all of the computers at the Polytechnic, and 
+               it does happen to be the industry standard for web animation, so it was the clear choice. I drew all of the art
+               assets I used myself, primarily using Animate's brush and pencil tools.
+            </p>
+            <p>When exporting the project, I decided to use HTML5-- .swf files are more inconvenient to run for most users, and I imagine
+               that support for them will only be harder to come by as more and more of the Internet moves on to the animation format
+               of the future.
+            <h3>Asset Management</h3>
+            <div class="imgrowwrapper">
+                <div class="imgrow two">
+                    <a href="img/struggles 14.png"><img src="img/struggles 14.png"></img></a>
+                    <a href="img/struggles 17.png"><img src="img/struggles 17.png"></img></a>
+                </div>
+            </div>
+            <p>Adobe Animate features two main tools for managing assets. First is the library, which is where
+               tweenable "symbols" are stored. I was able to use this feature to quickly and easily place additional instances
+               of key objects into frames-- this was especially useful for the apple, which in a couple of scenes appeared
+               multiple times at once. This feature was also a huge help in the couple of cases where I wanted to edit a symbol
+               after I'd already placed multiple instances of it on the timeline: instead of having to manually update
+               each instance on its own, I simply edited the "master copy" stored in the library, and my changes were reflected
+               across every single instance of that symbol in my project.
+            </p>
+            <div class="imgrowwrapper">
+                <a href="img/struggles 15.png"><img src="img/struggles 15.png"></img></a>
+            </div>
+            <p>The other tool is the same layer and folder system that Illustrator and Photoshop use. I used this tool to manage
+               my "scenes" (which were more like individual shots than scenes), grouping each "scene's" layers up in their own folder so that
+               the timeline interface wasn't cluttered with a million irrelevant layers. I named most of my scenes so that I had an idea of
+               what their contents were.
+            <h3>Visual Tricks</h3>
+            <div class="imgrowwrapper">
+                <div class="imgrow two">
+                    <a href="img/struggles 16-a.png"><img src="img/struggles 16-a.png"></img></a>
+                    <a href="img/struggles 16-b.png"><img src="img/struggles 16-b.png"></img></a>
+                </div>
+            </div>
+            <p>A couple of types of keyframe turned out to be surprisingly useful once I got to animating everything: in particular, the
+               scale and alpha keyframes. By combining scale tweening with very small motion tweens, I found an extremely effective
+               way to convey three-dimensional movement. The screenshots above show how I was able to use this to make this quite extreme
+               shot, of an apple slowly descending upon an owl's head, more believable and suspenseful.
+            </p>
+            <div class="imgrowwrapper">
+                <div class="imgrow two">
+                    <a href="img/struggles 21-a.png"><img src="img/struggles 21-a.png"></img></a>
+                    <a href="img/struggles 18.png"><img src="img/struggles 18.png"></img></a>
+                </div>
+            </div>
+            <p>Alpha tweening, on the other hand, is quite a versatile tool. I was able to use it to make changes in light level more realistic,
+               by starting layers with shading or lighting on them at 0% alpha and then scaling that up to 100% a few frames later. I also used
+               it in the shot on the right, to create a classic overdramatic slow-mo effect once the apple finally lands on the owl's head. I think my
+               favourite use of it was in the extended flashback sequence at the end of the animation, when the owl finally exacts its vengeance.
+               By combining the fade-in and fade-out of each "flashback" with simple pans across the screen, I was able to legibly evoke that trope
+               (and convey the true depth of the owl's anguish and hatred) quite cheaply.
+            </p>
+            <div class="imgrowwrapper">
+                <div class="imgrow two">
+                    <a href="img/struggles 20-a.png"><img src="img/struggles 20-a.png"></img></a>
+                    <a href="img/struggles 20-b.png"><img src="img/struggles 20-b.png"></img></a>
+                </div>
+            </div>
+            <p>Another little trick I pulled, outside of these exotic tweens, was in this shot of the apple bouncing over a tree root. As you
+               can see, it starts out in front of the root, but then winds up "underneath" the layer of the tree itself. I created this effect
+               with the select tool-- first I drew the entire tree, root and all, on a single layer as a single picture, so that they would attach
+               together seamlessly. Then I selected the region of the root that I wanted the apple to appear "in front of", and ported it over to
+               a separate layer on the timeline. Then I put the layer with the apple tween on it between these two layers, so that the apple would be
+               on top of/in front of the root but underneath/behind the tree.
+            </p>
+            <h3>Cinematic Principles</h3>
+            <p>Another way I tried to supplement my simple art style was by sticking to lessons we learned in the film unit. I mentioned
+               shots and scenes earlier in this discussion: one of the fundamental laws of slotting together multiple shots from different
+               angles is adhering to the line of action. If you want a scene to make visual sense, make sure that your characters
+               stay on the same side of the line of action.
+            </p>
+            <div class="imgrowwrapper">
+                <div class="imgrow two">
+                    <a href="img/struggles 21-a.png"><img src="img/struggles 21-a.png"></img></a>
+                    <a href="img/struggles 21-b.png"><img src="img/struggles 21-b.png"></img></a>
+                </div>
+                <div class="imgrow two">
+                    <a href="img/struggles 21-c.png"><img src="img/struggles 21-c.png"></img></a>
+                    <a href="img/struggles 21-d.png"><img src="img/struggles 21-d.png"></img></a>
+                </div>
+            </div>
+            <p>If I hadn't stuck to this rule for this last scene, it could have been very difficult to parse what was going on. A lot of
+               different events were happening here: first the owl appeared over the apple, casting its shadow over it, and then it proceeded
+               to dive bomb it, while remembering all the indignities that the apple had subjected it to. But by constantly keeping the owl on the
+               left-hand side of the shot (and the apple on the right), and always having the owl and its shadow move <em>towards</em> the right,
+               I was able to keep the narrative coherent and linear. Owl hates apple, owl moves towards it. When the owl finally did manage to cross
+               over to the right side of the screen, it did so explicitly and on-screen, so that the viewer could easily follow the change in position.
+            <p>
+            <p>And that wraps it up! Hope you enjoyed this animation: it was definitely my favourite project so far.</p>
         </div>
 </div>
     
