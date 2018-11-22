@@ -27,7 +27,110 @@
     <h1>Final Project: "Sketcetera"</h1>
         <div class="section">
             <iframe src="sketcetera.html" height="600" width="800"></iframe>      
-        </div>  
+        </div>
+		<p class="caption">Incompatible with Firefox: works best with Google Chrome or Edge.<br />
+		Sound effects: <a href="http://soundbible.com/2172-Fast-Drawing.html">SoundBible.com</a>. 
+		Music: <a href="https://www.bensound.com/royalty-free-music/track/all-that-chill-hop">All That</a> by Benjamin Tissot. 
+		<br />All media licensed under <a href="https://creativecommons.org/licenses/by/3.0/nz/">Creative Commons Attribution 3.0</a>.</p>
+		<div class="section">
+			<h2>Research</h2>
+			<p>I decided to create an online "drawing app" relatively early on. The idea resonated with me because it struck me as a
+			very simple, but at the same time technically challenging, expression of interactivity. Unlike a map
+			or some of the other suggestions given for this assignment, a drawing app literally cannot help but be interactive,
+			meaning I didn't have to worry about coming up with some way to make my project more than an elaborate
+			content navigation system.
+			</p>
+			<p>The research I did about this application was mostly focused on implementation rather than design
+			considerations. I did give myself a brief refresher with Paint, which I based my app's point-and-click colour selection scheme off.
+			When I decided to add music I took a leaf out of the book of classic early 2000s Flash animations, by adding the classic
+			speaker icon.
+			</p>
+			<div class="imgrowwrapper">
+				<div class="imgrow two">
+					<a href="img/final/wireframe 1.png"><img src="img/final/wireframe 1.png" /></a>
+					<a href="img/final/wireframe 2.png"><img src="img/final/wireframe 2.png" /></a>
+				</div>
+			</div>
+			<p>These early wireframes show some of my first design choices. The colours being on the left-hand side of the screen
+			rather than across the top like they are in Paint was an early decision. It suited the dimensions that I wanted
+			to work with (wide rather than square or tall, since most screens and therefore web browsers are wider than they are
+			tall), and helped differentiate my application from its contemporaries (such as Paint). I wound up dropping
+			some of the bells and whistles included in these wireframes, most notably the colour selection palette moving in and out.
+			This was mostly down to technical difficulties: I wasn't able to figure out how to have the palette moving <em>and</em> keep the
+			drawing canvas working properly, and the baseline functionality/user experience won out over the fancy animation stuff. The
+			other main feature pictured above that I dropped was the custom pencil cursor, which I decided would be too clunky compared
+			to the default Windows cursor.</p>
+		</div>
+		<div class="section">
+			<h2>Development</h2>
+			<p>I started with the initial starting screen, since I already had a strong grasp of how to animate this
+			from my last assignment. One difference is that for this animation I implemented some HTML5 code: one this.stop()
+			statement on frame 1 to stop the animation from starting until the Play button is pressed, and then a second this.stop()
+			at the end of the animation (frame 12) to prevent the playhead from going any further in the timeline once the animation
+			ends. The title screen itself was a movieclip: but rather than tweening the internal symbols, I intentionally "animated" them 
+			by putting them into two unmoving
+			keyframes, each trailed by 14 normal frames. The resulting movement was jerky and cartoonish, reinforcing the 
+			childish aesthetic of my title screen.</p>
+			<div class="imgwrapper">
+				<img class="gif" src="https://thumbs.gfycat.com/AdvancedSlimyJohndory.webp" />			
+			</div>
+			<p>The animation after clicking the button was a simple combination of position and opacity tweening, to move this title
+			animation offscreen and make it fade into transparence at the same time. Likewise, moving the palette onscreen
+			involved similar position keyframes, just in the other direction. I did run into an amusing bug with the button itself
+			(which is not pictured above, since it wasn't part of the movieclip): the button initially didn't contain any fill, including in the
+			"Hit" frame, so I had to click directly on the stroke itself to activate the animation. Luckily, this was quite easy to fix
+			by using the fill tool on the Hit frame.
+			<p>
+			<p>Once I had finished the title screen, I had to go on to the application's core functionality: being able to draw to the canvas. It
+			proved more difficult than I had anticipated to find any resources to begin with: it transpires that "adobe animate drawing tool tutorial"
+			is a great way to find tutorials about using Adobe Animate's own drawing tool, and a really bad way to find ways to make drawing tools <em>in</em> 
+			Adobe Animate. Once I refined my search terms, using "HTML5" as a keyword rather than "Adobe Animate", I began to find more useful results.
+			Even still, I went down quite a few dead ends before I finally discovered CreateJS's own docs-- specifically,
+			a <a href="https://www.createjs.com/tutorials/Mouse%20Interaction/">tutorial on mouse interaction</a> that specifically included a "finger painting" tool.
+			From this I learnt about the existence of the powerful "pressmove" event, which as far as I can tell doesn't exist at all in base Javascript, and
+			finally made my glorious breakthrough.</p>
+			<p>With drawing working, I had to figure out my colours. First, I went over the design. While I had come up with their physical
+			layout early on in the wireframing process, I still had to decide whether I wanted to mix colours randomly (for example red-blue-yellow-green)
+			or arrange them in a more sensible "rainbow" order. I decided on the rainbow because, in tandem with the asymmetrical "staircase" structure,
+			the colours produced quite a pleasing visual effect-- and it helped to make the colours easier to find, too. Once I knew what colours I wanted
+			and what order I wanted them in, I went ahead and made a button for each colour (giving each one a sensible name: the word "button" first so that they would
+			be grouped together in alphabetical order), and placed them within my
+			palette symbol.</p>
+			<div class="imgwrapper">
+				<a href="img/final/struggles 4.png"><img src="img/final/struggles 4.png" /></a>
+			</div>
+			<p>The functionality for the buttons rested entirely in Javascript, as you might expect. Each button had its own onClick listener,
+			which when triggered changed the global variable "stroke_color". As a programmer, I was pleased with the simplicity of the global variable solution (which I later
+			used to make my music work), but I could see that my handling of the buttons-- drawing each one individually, then having to give each one its own handler (and edit
+			the name and colour value of each function by hand)-- was not the most efficient it could have been.
+			
+			<div class="imgwrapper">
+				<a href="img/final/struggles 6.png"><img src="img/final/struggles 6.png" /></a>
+			</div>
+			<div class="imgwrapper">
+				<a href="img/final/struggles 7.png"><img src="img/final/struggles 7.png" /></a>
+			</div>
+			
+			<p>However, properly programmatizing something in order to save
+			time doing it takes time on its own, and without having ever done this before, I'm not sure how much time it would have taken in this context. I'm reasonably sure that
+			I actually saved time doing it the "slow" way, rather than figuring out the "fast" way and then doing that instead. Of course, this reckoning would change if I were
+			working with 48 or 96 colours, rather than just 12.</p>
+			<p>To make this a truly multimedia experience, the last thing I dealt with was music. I knew I wanted a sort of scribbly sound
+			for pressing the start button, again to reinforce the drawing theme, and then a nice, "easy listening" type of tune for the application
+			itself. I found these two files after digging through some royalty free music sites online, and they sounded good enough for my price range
+			of zero dollars.</p>
+			<p>Adding these files to the project
+			itself was quite simple: I just imported them to my library and dropped them in the frames I wanted to play them
+			from. The real challenge was getting the sound to export properly alongside the Javascript and HTML. Elise, our lecturer,
+			wound up sharing with us the fruits of her own experimentation, and with her instruction I was able to select the publish settings
+			necessary to export an HTML5 project with full sound.
+			</p>
+			<div class="imgwrapper">
+				<a href="img/wizard.png"><img src="img/wizard.png" /></a>
+			</div>
+			<p>And that's Multimedia finished. It's been a great ride. See you next year!</p>
+		</div>
+		
 </div>
     
 </body>
