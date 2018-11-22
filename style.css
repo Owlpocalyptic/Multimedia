@@ -206,6 +206,11 @@ td
     max-width:650px;
 }
 
+.caption.upper
+{
+	margin-top:-30px
+}
+
 .imgwrapper
 {
 	margin-top:0px;
